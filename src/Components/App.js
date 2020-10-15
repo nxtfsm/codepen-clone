@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import Editor from './Editor';
+import Placeholder from './_placeholderContent';
 import useLocalStorage from '../Hooks/useLocalStorage';
 
-
 function App() {
-  const [html, setHtml] = useLocalStorage('html', ''),
-        [css, setCss] = useLocalStorage('css', ''),
-        [js, setJs] = useLocalStorage('js', ''),
-        [srcDoc, setSrcDoc] = useState('');
+  const [html, setHtml] = useLocalStorage('html', Placeholder.html()),
+        [css, setCss] = useLocalStorage('css', Placeholder.css()),
+        [js, setJs] = useLocalStorage('js', Placeholder.js()),
+        [srcDoc, setSrcDoc] = useState();
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setSrcDoc(
         `<html>
-            <body>${html}</body>
-            <style>${css}</style>
-            <script>${js}</script>
+            <body>${ html }</body>
+            <style>${ css }</style>
+            <script>${ js }</script>
           </html>`
       )
     }, 250)

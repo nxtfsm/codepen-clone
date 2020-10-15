@@ -1,16 +1,3 @@
-body {
-  margin: 0;
-}
-
-.top-pane {
-  background-color: $ui-background;
-}
-
-.pane {
-  height: 50vh;
-  display: flex;
-}
-
 .editor-container {
   flex-grow: 1;
   flex-basis: 0;

@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+}
+
+.top-pane {
+  background-color: $ui-background;
+}
+
+.pane {
+  height: 50vh;
+  display: flex;
+}

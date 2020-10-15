@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'codemirror/lib/codemirror.css';
-import 'codemirror/theme/material.css';
+//import 'codemirror/theme/material.css';
+import './ibmCarbonMirrorTheme.css';
 import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/css/css';
 import 'codemirror/mode/javascript/javascript';
@@ -39,7 +40,7 @@ export default function Editor(props) {
         options={{
           lineWrapping: true,
           lint: true,
-          theme: 'material',
+          theme: 'ibmCarbonMirror',
           mode: language,
           lineNumbers: true
         }}

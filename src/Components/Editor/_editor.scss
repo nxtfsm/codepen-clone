@@ -20,8 +20,9 @@
   @include carbon--type-style('expressive-heading-03');
   display: flex;
   justify-content: space-between;
-  background-color: $ui-02;
-  color: $text-01;
+  //background-color: $decorative-01;
+  background-color: $interactive-04;
+  color: $text-04;
   padding: $spacing-03 $spacing-03 $spacing-03 $spacing-05;
   border-top-right-radius: $spacing-03;
   border-top-left-radius: $spacing-03;

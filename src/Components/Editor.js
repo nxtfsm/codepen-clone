@@ -5,8 +5,7 @@ import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/css/css';
 import 'codemirror/mode/javascript/javascript';
 import { Controlled as ControlledEditor } from 'react-codemirror2';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCompressAlt, faExpandAlt } from '@fortawesome/free-solid-svg-icons'
+import { Maximize20, Minimize20 } from '@carbon/icons-react';
 
 
 export default function Editor(props) {
@@ -30,7 +29,7 @@ export default function Editor(props) {
           type='button'
           className='expand-collapse-button'
           onClick={ () => setOpen(prevOpen => !prevOpen) }>
-          <FontAwesomeIcon icon={ open ? faCompressAlt : faExpandAlt } />
+          { open ? <Minimize20 /> : <Maximize20 /> }
         </button>
       </div>
       <ControlledEditor

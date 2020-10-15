@@ -9,12 +9,41 @@ function _html() {
 }
 
 function _css() {
-  console.log('firing in css')
-  return () => 'body { background-color: #525252 }'
+  const defaultStr = `html {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #525252;
+  }
+
+  h1 {
+  	font-family: monospace;
+    color: #8d8d8d;
+  }`
+  return () => defaultStr
+
 }
 
 function _js() {
-  return () => `let logOutput = 'log in browser console'\n\nconsole.log(logOutput)`
+  const defaultStr = `const hd = document.querySelector('h1');
+let counter = 0;
+
+hd.style.cursor = 'pointer';
+hd.addEventListener('click', () => {
+	counter = handleClick(counter) });
+
+function handleClick(count) {
+	logCounter(count)
+    count++
+    return count
+}
+
+function logCounter(count) {
+	const logStr = \`Counter: \${count}\`;
+    console.log(logStr)
+}`
+  return () => defaultStr
 }
 
 export default PlaceholderContent
